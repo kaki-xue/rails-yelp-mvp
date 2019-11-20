@@ -1,0 +1,16 @@
+<h1> RESTAURANT REVIEWS</h1>
+
+<br>
+<br>
+
+<% @reviews.each do |review| %>
+<ul><% resto = Restaurant.find(review.restaurant_id) %>
+
+    <li><h5>Restaurant - <%= resto.name %></h5></li>,
+    <li>review: <%= review.content %></li>
+    <li>rating: <%= review.rating %></li>
+     <li><%= link_to "explore the restaurant",  restaurant_path(resto) %></li>
+
+</ul>
+<% end %>
+

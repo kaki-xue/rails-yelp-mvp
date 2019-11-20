@@ -1,0 +1,7 @@
+
+    <ul>
+    <li><h5>Restaurant - <%= Restaurant.find(@review.restaurant_id)%></h5></li>,
+    <li>review: <%= @review.content %></li>
+    <li>rating: <%= @review.rating %></li>
+    </ul>
+     <li><%= link_to "go back to restaurant",  restaurant_reviews_path(@review) %></li>
